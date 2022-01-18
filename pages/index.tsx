@@ -1,5 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
-import * as React from 'react'
 import {useState} from 'react'
 import {Dialog} from '@headlessui/react'
 import ClipLoader from "react-spinners/ClipLoader";
@@ -18,8 +16,7 @@ const IndexPage = () => {
     const [cartTotal, setCartTotal] = useState(10)
     const [loading, setLoading] = useState<boolean>(false)
 
-    const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
-        e.preventDefault()
+    const makePayment = async () => {
         setLoading(true)
         // Create a Checkout Session.
         const response = await axios.post('/api/checkout_sessions', {
@@ -65,9 +62,10 @@ const IndexPage = () => {
                                     ? <ClipLoader loading={loading} css={override} size={100}/>
                                     : (
                                         <button
-                                            type="submit"
+                                            type="button"
                                             className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                             disabled={loading}
+                                            onClick={() => makePayment()}
                                         >
                                             Make Payment
                                         </button>
