@@ -51,7 +51,7 @@ const IndexPage = () => {
                                 disabled={loading}
                                 onClick={() => makePayment()}
                             >
-                                Make Payment
+                                Stripe Payment
                             </button>
                         )
                     }
