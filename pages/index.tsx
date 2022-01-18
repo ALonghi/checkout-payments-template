@@ -47,11 +47,11 @@ const IndexPage = () => {
                         : (
                             <button
                                 type="button"
-                                className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-base font-normal rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                 disabled={loading}
                                 onClick={() => makePayment()}
                             >
-                                Stripe Payment
+                                Pay with Stripe
                             </button>
                         )
                     }
