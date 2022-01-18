@@ -1,5 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# Code editors & stuff
+.idea
+.history
+.vscode
+.DS_STORE
+
 # dependencies
 /node_modules
 /.pnp
